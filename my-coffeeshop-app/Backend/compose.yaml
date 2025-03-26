@@ -15,7 +15,7 @@ services:
     build:
       context: ./drink
       dockerfile: drink.Dockerfile
-    image: shashass/drink:esd
+    image: jiaxuanlai/drink:esd
     restart: always
     environment:
       # dbURL: mysql+mysqlconnector://is213@host.docker.internal:3306/cart
@@ -67,7 +67,7 @@ services:
     build:
       context: ./Cart
       dockerfile: cart.Dockerfile
-    image: shashass/cart:esd
+    image: jiaxuanlai/cart:esd
     restart: always
     environment:
       dbURL: mysql+mysqlconnector://is213@host.docker.internal:3306/cart
@@ -85,7 +85,7 @@ services:
     build:
       context: ./Cart_items
       dockerfile: cart_items.Dockerfile
-    image: shashass/cart_items:esd
+    image: jiaxuanlai/cart_items:esd
     restart: always
     environment:
       dbURL: mysql+mysqlconnector://is213@host.docker.internal:3306/cart_items
@@ -102,7 +102,7 @@ services:
     build:
       context: ./Cart_Items_Customisation
       dockerfile: cart_items_customisation.Dockerfile
-    image: shashass/cart_items_customisation:esd
+    image: jiaxuanlai/cart_items_customisation:esd
     restart: always
     environment:
       dbURL: mysql+mysqlconnector://is213@host.docker.internal:3306/cart_items_customisation
@@ -119,7 +119,7 @@ services:
     build:
       context: ./Profile
       dockerfile: profile.Dockerfile
-    image: shashass/profile:esd
+    image: jiaxuanlai/profile:esd
     restart: always
     environment:
       dbURL: mysql+mysqlconnector://is213@host.docker.internal:3306/profile
@@ -136,7 +136,7 @@ services:
     build:
       context: ./StripePayment
       dockerfile: payment.Dockerfile
-    image: shashass/payment:esd
+    image: jiaxuanlai/payment:esd
     restart: always
     environment:
       PYTHONUNBUFFERED: 1
@@ -152,7 +152,7 @@ services:
     build:
       context: ./AddToCart
       dockerfile: addToCart.Dockerfile
-    image: shashass/addtocart:esd
+    image: jiaxuanlai/addtocart:esd
     restart: always
     depends_on:
       - cart
